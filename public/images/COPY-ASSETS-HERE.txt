@@ -1,0 +1,10 @@
+COPY THESE EXISTING ASSETS INTO THIS FOLDER:
+logo.png
+franchise-store.png
+franchise-storefront.png
+franchise-counter.png
+franchise-product.png
+turmeric-label.png
+matcha-label.png
+chocolate-packaging.png
+gift-box-design.png
