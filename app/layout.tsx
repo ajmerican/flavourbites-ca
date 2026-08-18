@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { GoogleAnalytics } from "@next/third-parties/google";
-
+import AnalyticsClickTracker from "@/components/AnalyticsClickTracker";
 import "./globals.css";
 
 import SiteFooter from "@/components/SiteFooter";
@@ -88,7 +88,7 @@ export default function RootLayout({
       <body>
         <OrganizationJsonLd />
         <LocalBusinessJsonLd />
-
+<AnalyticsClickTracker />
         {children}
 
         <SiteFooter />
