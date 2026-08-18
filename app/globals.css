@@ -205,9 +205,13 @@ footer{padding:70px 7vw 30px;background:var(--forest-deep);color:#fff}.footerTop
   max-width: 720px;
 }
 
-.siteFooterBrand img {
-  width: 185px;
-  height: auto;
+.siteFooterEyebrow {
+  margin: 0 0 16px;
+  color: var(--gold-soft);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
 }
 
 .siteFooterBrand h2 {

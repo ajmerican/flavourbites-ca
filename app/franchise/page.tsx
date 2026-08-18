@@ -4,8 +4,26 @@ import Link from "next/link";
 import { ArrowLeft, ArrowRight, Building2, Check, Network, Store } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Franchise Opportunities",
-  description: "Explore Flavour Bites franchise and development opportunities in Canada and select markets.",
+  title: "Flavour Bites Franchise Opportunities Canada",
+  description:
+    "Explore Flavour Bites franchise opportunities in Canada, including single-unit, multi-unit and select development opportunities with our Canadian dessert café brand.",
+  alternates: {
+    canonical: "/franchise",
+  },
+  openGraph: {
+    title: "Flavour Bites Franchise Opportunities Canada",
+    description:
+      "Explore franchise and development opportunities with Flavour Bites, a Canadian dessert café brand built from real operating experience.",
+    url: "https://www.flavourbites.ca/franchise",
+    images: [
+      {
+        url: "/images/franchise-store.png",
+        width: 1200,
+        height: 630,
+        alt: "Flavour Bites franchise opportunity in Canada",
+      },
+    ],
+  },
 };
 
 export default function FranchisePage() {

@@ -5,8 +5,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight, Coffee, Gift, IceCreamBowl, MapPin, Menu, ShoppingBag, Sparkles, Store, Users, X } from "lucide-react";
 import { useState } from "react";
-
-const ORDER_URL = "https://microsite.talech.com/ordering/TUTTI-FRUTTI-DESSERT-CAFE-EDMONTON-AB/KVAzewZD0MRYgB85";
+import { ORDER_URL } from "@/lib/commerce";
 
 const experiences = [
   {
@@ -38,74 +37,6 @@ const experiences = [
     imageAlt: "Flavour Bites waffle and street-food-inspired desserts",
   },
 ];
-
-
-// Then replace the existing <section className="experienceGrid">...</section>
-// with this:
-
-<section className="experienceGrid">
-  {experiences.map((item, index) => {
-    const Icon = item.icon;
-
-    return (
-      <motion.article
-        className="experienceCard"
-        key={item.title}
-        initial={{ opacity: 0, y: 35 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.2 }}
-        transition={{ delay: index * 0.07, duration: 0.55 }}
-      >
-        <div className="experienceCardVisual">
-          <Image
-  src={item.image}
-  alt={item.imageAlt}
-  fill
-  className={`experienceCardImage experienceCardImage-${index + 1}`}
-  sizes="(max-width: 760px) 100vw, 25vw"
-  style={{
-    objectFit:
-      index === 0 || index === 2 || index === 3
-        ? "contain"
-        : "cover",
-
-    objectPosition:
-      index === 0
-        ? "center center"
-        : index === 1
-        ? "center 48%"
-        : "center center",
-
-    padding:
-      index === 0
-        ? "8px 20px 0"
-        : index === 2
-        ? "12px 22px"
-        : index === 3
-        ? "8px"
-        : "0",
-  }}
-/>
-
-          <div className="experienceCardShade" aria-hidden="true" />
-
-          <div className="experienceCardNumber">
-            0{index + 1}
-          </div>
-
-          <div className="experienceCardIcon">
-            <Icon size={21} />
-          </div>
-        </div>
-
-        <div className="experienceCardBody">
-          <h3>{item.title}</h3>
-          <p>{item.text}</p>
-        </div>
-      </motion.article>
-    );
-  })}
-</section>
 
 
 const products = [
@@ -258,15 +189,5 @@ export default function HomePage() {
       </div>
       <div className="visitImage"><Image src="/images/franchise-storefront.png" alt="Flavour Bites Edmonton storefront" fill sizes="(max-width:900px) 100vw, 48vw"/></div>
     </section>
-
-    <footer>
-      <div className="footerTop"><Image src="/images/logo.png" alt="Flavour Bites" width={300} height={86}/><h2>Indulge. Savour. Love.</h2></div>
-      <div className="footerGrid">
-        <div><h4>Experience</h4><a href="#experience">Dessert café</a><a href={ORDER_URL} target="_blank" rel="noreferrer">Order online</a><a href="#retail">Retail collection</a></div>
-        <div><h4>Flavour Bites</h4><a href="#story">Our story</a><Link href="/franchise">Franchise</Link><a href="https://flavourbites.us">United States</a></div>
-        <div><h4>Edmonton</h4><p>413-2331 66 Street NW<br/>Edmonton, AB T6K 4B5<br/>Canada</p></div>
-      </div>
-   
-    </footer>
-  </main>;
+</main>;
 }

@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 
@@ -10,22 +9,15 @@ export default function SiteFooter() {
     <footer className="siteFooter">
       <div className="siteFooterTop">
         <div className="siteFooterBrand">
-          <Link href="/" aria-label="Flavour Bites Canada home">
-            <Image
-              src="/images/logo.png"
-              alt="Flavour Bites"
-              width={300}
-              height={86}
-            />
-          </Link>
+  <p className="siteFooterEyebrow">Flavour Bites Canada</p>
 
-          <h2>Indulge. Savour. Love.</h2>
+  <h2>Indulge. Savour. Love.</h2>
 
-          <p>
-            A Canadian dessert-café experience built around discovery,
-            hospitality and flavour.
-          </p>
-        </div>
+  <p>
+    A Canadian dessert-café experience built around discovery,
+    hospitality and flavour.
+  </p>
+</div>
 
         <a
           className="siteFooterOrder"
