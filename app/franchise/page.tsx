@@ -102,10 +102,6 @@ export default function FranchisePage() {
       <strong>Important franchise notice</strong>
       <p>This website is for general information and expressions of interest only and is not an offer to sell a franchise. Any franchise offering will be made only in compliance with applicable laws and required disclosure obligations. Availability is subject to qualification, market availability and applicable legal requirements. Nothing on this website is a representation of actual or potential sales, profits or financial performance.</p>
     </section>
-
-    <footer className="franchiseFooter">
-      <Image src="/images/logo.png" alt="Flavour Bites" width={220} height={65}/>
-  
-    </footer>
+    
   </main>
 }
